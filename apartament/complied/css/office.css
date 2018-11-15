@@ -1,0 +1,107 @@
+.office {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 50px 0;
+  overflow: auto;
+  background: #f8f6f7;
+}
+
+.office > div:first-child {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  -webkit-box-ordinal-group: 0;
+      -ms-flex-order: -1;
+          order: -1;
+}
+
+.office > div:first-child > div {
+  width: 270px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 15px;
+  margin-top: 0;
+}
+
+.office > div:first-child > div:last-child > div {
+  background-color: #e6e6e6;
+}
+
+.office > div:first-child > div:first-child > div {
+  background-color: green;
+}
+
+.office > div:first-child > div > div {
+  width: 30px;
+  height: 30px;
+  border-radius: 15px;
+  border: solid #000 1px;
+  margin-right: 20px;
+}
+
+.office > div:first-child > div > span {
+  font-family: arial;
+  font-size: 15px;
+  color: #000;
+  font-weight: 800;
+}
+
+.office > svg {
+  width: auto;
+  height: 200vh;
+}
+
+.office > svg > g:last-child > path {
+  cursor: pointer;
+}
+
+.office > svg > g:last-child > path:hover {
+  opacity: 0.8 !important;
+}
+
+.office > svg > g:last-child > path:nth-child(-n+6) {
+  fill: green !important;
+}
+
+.office > div:last-child {
+  position: absolute;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  top: -1000px;
+  left: -1000px;
+}
+
+.office > div:last-child:before {
+  content: '';
+  position: absolute;
+  border: 15px solid transparent;
+  border-left: 15px solid #fff;
+  right: -30px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
