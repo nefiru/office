@@ -141,7 +141,6 @@ var app = new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
 			if (params['type']) {
 				this.type = params['type'];
 			}
-			console.log(this.floor + ' ' + this.type);
 		}
 	},
 	computed: {},
@@ -12379,7 +12378,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 			activePop: true,
 			paths: '',
 			topPop: '',
-			leftPop: ''
+			leftPop: '',
+			path: window.path
 		};
 	},
 	methods: {
@@ -12438,7 +12438,7 @@ var render = function() {
               y: "-41.66666",
               x: "1.0394408",
               id: "image152",
-              "xlink:href": "img/test_2.png"
+              href: _vm.path + "img/test_2.png"
             }
           })
         ]),
@@ -13309,7 +13309,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 			T6: 13,
 			T7: 29,
 			T8: 7,
-			T9: 8
+			T9: 8,
+			path: window.path
 		};
 	},
 	methods: {},
@@ -13318,19 +13319,18 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 		var _this = this;
 
 		if (this.floor == 1) {
-			this.link = 'img/first_mall.png';
+			this.link = path + 'img/first_mall.png';
 		} else if (['2', '3', '4'].indexOf(this.floor) != -1) {
-			this.link = 'img/mall.png';
+			this.link = path + 'img/mall.png';
 		} else if (this.floor == 5) {
-			this.link = 'img/office-5.png';
+			this.link = path + 'img/office-5.png';
 		} else if (this.floor == 6) {
-			this.link = 'img/office-6.png';
+			this.link = path + 'img/office-6.png';
 		} else if (this.floor > 6) {
 			this.apartament = true;
 		}
 
 		this.paths = document.querySelectorAll(".floor path");
-		console.log(this.paths);
 
 		var _loop = function _loop(i) {
 
@@ -13424,7 +13424,7 @@ var render = function() {
                 y: "216.40404",
                 x: "-0.10856482",
                 id: "image160",
-                "xlink:href": "img/floor.svg",
+                href: _vm.path + "img/floor.svg",
                 preserveAspectRatio: "none",
                 height: "80.697914",
                 width: "232.83333"
@@ -14291,7 +14291,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 	data: function data() {
 		return {
 			href: window.location.href.split('?')[0],
-			href2: window.location.href.split('&')[0]
+			href2: window.location.href.split('&')[0],
+			path: window.path
 		};
 	},
 	methods: {},
@@ -14322,7 +14323,7 @@ var render = function() {
       _c("span", [_vm._v("\n\t\t\tПланировка " + _vm._s(_vm.type) + "\n\t\t")])
     ]),
     _vm._v(" "),
-    _c("img", { attrs: { src: "img/type-" + _vm.type + ".png" } })
+    _c("img", { attrs: { src: _vm.path + "img/type-" + _vm.type + ".png" } })
   ])
 }
 var staticRenderFns = []

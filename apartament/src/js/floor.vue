@@ -26,7 +26,7 @@
 		       y="216.40404"
 		       x="-0.10856482"
 		       id="image160"
-		       xlink:href="img/floor.svg"
+		       :href="path + 'img/floor.svg'"
 		       preserveAspectRatio="none"
 		       height="80.697914"
 		       width="232.83333" />
@@ -282,7 +282,8 @@
 				T6: 13,
 				T7: 29,
 				T8: 7,
-				T9: 8
+				T9: 8,
+				path: window.path
 			}	
 		},
 		methods: {
@@ -293,19 +294,18 @@
 		},
 		mounted: function () {
 			if ( this.floor == 1 ) {
-				this.link = 'img/first_mall.png';
+				this.link = path + 'img/first_mall.png';
 			} else if ( ['2','3','4'].indexOf( this.floor ) != -1 ) {
-				this.link = 'img/mall.png';
+				this.link = path + 'img/mall.png';
 			} else if ( this.floor == 5 ) {
-				this.link = 'img/office-5.png';
+				this.link = path + 'img/office-5.png';
 			} else if ( this.floor == 6 ) {
-				this.link = 'img/office-6.png';
+				this.link = path + 'img/office-6.png';
 			} else if ( this.floor > 6 ) {
 				this.apartament = true;
 			}
 
 			this.paths = document.querySelectorAll( ".floor path" );
-			console.log( this.paths );
 			for ( let i = 0; i < this.paths.length; i++ ) {
 				
 				this.paths[ i ].addEventListener( 'click', function () {

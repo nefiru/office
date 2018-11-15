@@ -37,7 +37,6 @@ var app = new Vue({
 			if ( params[ 'type' ] ) {
 				this.type = params[ 'type' ];
 			}
-			console.log(this.floor + ' ' + this.type);
 		}
 	},
 	computed: {

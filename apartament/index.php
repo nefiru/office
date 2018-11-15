@@ -24,7 +24,16 @@
 			<type :type="type" :floor="floor"></type>
 		</div>
 	</div>
+	<?php
+		echo '<script type="text/javascript">
+		window.path =\'' . bloginfo('template_url') . '\';
+		</script>';
+	?>
+	<script type="text/javascript">
+		window.path = '';
+	</script>
 	<script type="text/javascript" src="./complied/js/app.js"></script>
+	
 	
 </body>
 </html>

@@ -15,7 +15,7 @@
 				Планировка {{type}}
 			</span>
 		</div>
-		<img :src="'img/type-' + type + '.png'">
+		<img :src="path + 'img/type-' + type + '.png'">
 	</div>
 </template>
 
@@ -57,7 +57,8 @@
 		data: function () {
 			return {
 				href: window.location.href.split('?')[0],
-				href2: window.location.href.split('&')[0]
+				href2: window.location.href.split('&')[0],
+				path: window.path
 			}	
 		},
 		methods: {

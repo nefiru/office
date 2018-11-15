@@ -31,7 +31,7 @@
 		        y="-41.66666"
 		        x="1.0394408"
 		        id="image152"
-		      xlink:href="img/test_2.png" />
+		      :href="path + 'img/test_2.png'" />
 		  </g>
 		  <g
 		     inkscape:groupmode="layer"
@@ -258,7 +258,8 @@
 				activePop: true,
 				paths: '',
 				topPop: '',
-				leftPop: ''
+				leftPop: '',
+				path: window.path
 			}	
 		},
 		methods: {
@@ -273,7 +274,7 @@
 			
 		},
 		mounted: function () {
-			
+
 			this.paths = document.querySelectorAll( "#layer2 > path" );
 			for ( let i = 0; i < this.paths.length; i++ ) {
 				this.paths[ i ].addEventListener( 'mousemove', function (e) {
