@@ -26,7 +26,7 @@
 	</div>
 	<?php
 		echo '<script type="text/javascript">
-		window.path =\'' . bloginfo('template_url') . '\';
+		window.path =\'' . bloginfo('template_url') . '/\';
 		</script>';
 	?>
 	<script type="text/javascript">
