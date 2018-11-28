@@ -13471,7 +13471,7 @@ var render = function() {
             expression: "apartament"
           }
         ],
-        attrs: { width: "232mm", height: "80mm", viewBox: "0 0 232 80" }
+        attrs: { width: "232mm", height: "83mm", viewBox: "0 0 232 80" }
       },
       [
         _c(
