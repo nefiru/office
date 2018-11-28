@@ -5,13 +5,15 @@
 	<link rel="stylesheet" type="text/css" href="complied/css/photo-sphere-viewer.min.css">
 
 	<style type="text/css">
+		* {
+			font-family: Assistant, Roboto;
+		}
 		.app {
 			width: 100%;
 		}
 		.app > div {
 
 		}
-
 		.slider {
 			max-width: 700px;
 			overflow: hidden;
@@ -123,7 +125,7 @@
 
 		
 	?>
-	<script type="text/javascript" src="./complied/js/app.js"></script>
+	<script type="text/javascript" src="<?php echo get_bloginfo('template_url'); ?>/complied/js/app.js"></script>
 	
 </body>
 </html>
