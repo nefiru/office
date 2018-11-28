@@ -32,18 +32,16 @@
 		</div>
 	</div>
 	<?php
-		echo '<script type="text/javascript">
-		window.path =\'' . bloginfo('template_url') . '/\';
+		
+
+	echo '<script type="text/javascript">
+		window.path =\'' . get_bloginfo('template_url') . '/\';
 		</script>';
-
 		if ( !isset( $_GET[ 'floor' ] ) && !isset( $_GET[ 'type' ] )  ) {
-
 			echo '<script type="text/javascript">
 			window.descMain =\'' . carbon_get_post_meta(get_the_ID(),'eng_plan_main_description','rich-text') . '\';
 			</script>';
-
 		} else if ( isset( $_GET[ 'floor' ] ) && !isset( $_GET[ 'type' ] )  ) {
-
 			if ( $_GET[ 'floor' ] < 8 ) {
 				echo '<script type="text/javascript">
 				window.descFloor =\'' . carbon_get_post_meta(get_the_ID(),'eng_stage' . $_GET[ 'floor' ] . '_description','rich-text') . '\';
@@ -52,7 +50,6 @@
 				echo '<script type="text/javascript">
 				window.descFloor =\'' . carbon_get_post_meta(get_the_ID(),'eng_plan_8-21_stage_description','rich-text') . '\';
 				</script>';
-
 				for ( $i = 1; $i < 33; $i++ ) {
 					$arrayAp[] = carbon_get_post_meta(get_the_ID(),'eng_apartament' . $i . '-excerpt','text');
 				}
@@ -62,11 +59,10 @@
 			}
 			
 		} else if ( isset( $_GET[ 'floor' ] ) && isset( $_GET[ 'type' ] )  ) {
-
 			echo '<script type="text/javascript">
 			window.richDescAp =\'' . carbon_get_post_meta(get_the_ID(),'eng_apartament' . $_GET[ 'type' ] . '-desc','rich-text') . '\';
 			</script>';
-			$dir = opendir( 'img/rooms/room-' . $_GET[ 'type' ] );
+			$dir = opendir( get_bloginfo('template_url') . '/img/rooms/room-' . $_GET[ 'type' ] );
 			while($file = readdir($dir)){
 			    if( $file != '.' || $file != '..' ) {
 			        $files[] = $file;
@@ -75,8 +71,6 @@
 			echo '<script type="text/javascript">
 			window.imgs =\'' . json_encode($files) . '\';
 			</script>';
-
-
 		}
 
 
