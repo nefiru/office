@@ -60,7 +60,7 @@
 			
 		} else if ( isset( $_GET[ 'floor' ] ) && isset( $_GET[ 'type' ] )  ) {
 			echo '<script type="text/javascript">
-			window.richDescAp =\'' . carbon_get_post_meta(get_the_ID(),'eng_apartament' . $_GET[ 'type' ] . '-desc','rich-text') . '\';
+			window.richDescAp =`' . carbon_get_post_meta(get_the_ID(),'eng_apartament' . $_GET[ 'type' ] . '-desc','rich-text') . '`;
 			</script>';
 			$dir = opendir( get_bloginfo('template_url') . '/img/rooms/room-' . $_GET[ 'type' ] );
 			while($file = readdir($dir)){
