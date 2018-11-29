@@ -704,7 +704,7 @@ process.umask = function() { return 0; };
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(6);
-module.exports = __webpack_require__(34);
+module.exports = __webpack_require__(32);
 
 
 /***/ }),
@@ -12078,7 +12078,7 @@ exports = module.exports = __webpack_require__(1)(false);
 
 
 // module
-exports.push([module.i, "\n.office[data-v-d26e7c8e] {\n  width: 100%;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  padding: 50px 0;\n  overflow: auto;\n  background: #f8f6f7;\n}\n.office > div[data-v-d26e7c8e]:first-child {\n    padding-bottom: 20px;\n}\n.office > div[data-v-d26e7c8e]:nth-child(2) {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -ms-flex-wrap: wrap;\n        flex-wrap: wrap;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n    width: 100%;\n    -webkit-box-ordinal-group: 0;\n        -ms-flex-order: -1;\n            order: -1;\n}\n.office > div:nth-child(2) > div[data-v-d26e7c8e] {\n      width: 270px;\n      display: -webkit-box;\n      display: -ms-flexbox;\n      display: flex;\n      -webkit-box-align: center;\n          -ms-flex-align: center;\n              align-items: center;\n      margin: 15px;\n      margin-top: 0;\n}\n.office > div:nth-child(2) > div:last-child > div[data-v-d26e7c8e] {\n        background-color: #e6e6e6;\n}\n.office > div:nth-child(2) > div:first-child > div[data-v-d26e7c8e] {\n        background-color: green;\n}\n.office > div:nth-child(2) > div > div[data-v-d26e7c8e] {\n        width: 30px;\n        height: 30px;\n        border-radius: 15px;\n        border: solid #000 1px;\n        margin-right: 20px;\n}\n.office > div:nth-child(2) > div > span[data-v-d26e7c8e] {\n        font-family: arial;\n        font-size: 15px;\n        color: #000;\n        font-weight: 800;\n}\n.office > svg[data-v-d26e7c8e] {\n    width: auto;\n    height: 80vh;\n}\n.office > svg > g:last-child > path[data-v-d26e7c8e] {\n      cursor: pointer;\n}\n.office > svg > g:last-child > path[data-v-d26e7c8e]:hover {\n      opacity: 0.8 !important;\n}\n.office > svg > g:last-child > path[data-v-d26e7c8e]:nth-child(-n+6) {\n      fill: green !important;\n}\n.office > div[data-v-d26e7c8e]:last-child {\n    position: absolute;\n    padding: 20px;\n    background-color: #fff;\n    border-radius: 10px;\n    top: -1000px;\n    left: -1000px;\n}\n.office > div[data-v-d26e7c8e]:last-child:before {\n      content: '';\n      position: absolute;\n      border: 15px solid transparent;\n      border-left: 15px solid #fff;\n      right: -30px;\n      top: 50%;\n      -webkit-transform: translateY(-50%);\n              transform: translateY(-50%);\n}\n", ""]);
+exports.push([module.i, "\n.office[data-v-d26e7c8e] {\n  width: 100%;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  padding: 50px 0;\n  overflow: auto;\n  background: #f8f6f7;\n}\n.office > svg[data-v-d26e7c8e] {\n    width: auto;\n    height: 80vh;\n    -webkit-box-ordinal-group: 0;\n        -ms-flex-order: -1;\n            order: -1;\n    margin-right: 50px;\n}\n.office > svg > g:last-child > path[data-v-d26e7c8e] {\n      cursor: pointer;\n      opacity: 0.0001 !important;\n}\n.office > svg > g:last-child > path[data-v-d26e7c8e]:hover {\n      opacity: 0.8 !important;\n      fill: green !important;\n}\n.office > div[data-v-d26e7c8e]:last-child {\n    position: absolute;\n    padding: 20px;\n    background-color: #fff;\n    border-radius: 10px;\n    top: -1000px;\n    left: -1000px;\n}\n.office > div[data-v-d26e7c8e]:last-child:before {\n      content: '';\n      position: absolute;\n      border: 15px solid transparent;\n      border-left: 15px solid #fff;\n      right: -30px;\n      top: 50%;\n      -webkit-transform: translateY(-50%);\n              transform: translateY(-50%);\n}\n", ""]);
 
 // exports
 
@@ -12122,6 +12122,7 @@ module.exports = function listToStyles (parentId, list) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
 //
 //
 //
@@ -12435,8 +12436,6 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "office" }, [
     _c("div", [_vm._v("\n\t\t" + _vm._s(_vm.descMain) + "\n\t")]),
-    _vm._v(" "),
-    _vm._m(0),
     _vm._v(" "),
     _c(
       "svg",
@@ -12903,26 +12902,7 @@ var render = function() {
       : _vm._e()
   ])
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", [
-      _c("div", [
-        _c("div"),
-        _vm._v(" "),
-        _c("span", [_vm._v("\n\t\t\t\tКомерческая недвижимость\n\t\t\t")])
-      ]),
-      _vm._v(" "),
-      _c("div", [
-        _c("div"),
-        _vm._v(" "),
-        _c("span", [_vm._v("\n\t\t\t\tАпартаменты\n\t\t\t")])
-      ])
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
@@ -14222,7 +14202,7 @@ var normalizeComponent = __webpack_require__(3)
 /* script */
 var __vue_script__ = __webpack_require__(24)
 /* template */
-var __vue_template__ = __webpack_require__(26)
+var __vue_template__ = __webpack_require__(31)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -14295,7 +14275,7 @@ exports = module.exports = __webpack_require__(1)(false);
 
 
 // module
-exports.push([module.i, "\n.type[data-v-748c0f12] {\n  width: 100%;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n}\n.type > div[data-v-748c0f12]:first-child {\n    width: 500px;\n    padding: 30px;\n    margin-bottom: 25px;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    -webkit-box-pack: start;\n        -ms-flex-pack: start;\n            justify-content: flex-start;\n    background: #B8D9EC;\n    border-top-right-radius: 35px;\n    border-bottom-right-radius: 35px;\n    margin-left: 0;\n    margin-right: auto;\n}\n.type > div:first-child span.arrow[data-v-748c0f12] {\n      padding: 0 20px;\n}\n.type > div[data-v-748c0f12]:nth-child(2) {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n    min-width: 700px;\n}\n.type > div:nth-child(2) > img[data-v-748c0f12] {\n      height: 90vh;\n      width: auto;\n      margin-right: 20px;\n}\n.type > div:nth-child(2) > div[data-v-748c0f12] {\n      display: -webkit-box;\n      display: -ms-flexbox;\n      display: flex;\n      -webkit-box-orient: vertical;\n      -webkit-box-direction: normal;\n          -ms-flex-direction: column;\n              flex-direction: column;\n      -webkit-box-align: center;\n          -ms-flex-align: center;\n              align-items: center;\n}\n.type > div:nth-child(2) > div > div[data-v-748c0f12]:last-child {\n        margin-top: 20px;\n        display: -webkit-box;\n        display: -ms-flexbox;\n        display: flex;\n        -webkit-box-align: center;\n            -ms-flex-align: center;\n                align-items: center;\n        -webkit-box-pack: center;\n            -ms-flex-pack: center;\n                justify-content: center;\n}\n.type > div:nth-child(2) > div > div:last-child span[data-v-748c0f12]:first-child {\n          margin-right: 15px;\n}\n.type > div:nth-child(2) > div > div:last-child span[data-v-748c0f12] {\n          display: block;\n          width: 180px;\n          background: #000;\n          position: relative;\n          text-align: center;\n          color: #fff;\n          padding: 5px 0;\n          border-radius: 10px;\n          cursor: pointer;\n}\n.type > div[data-v-748c0f12]:nth-child(3), .type > div[data-v-748c0f12]:nth-child(4) {\n    width: 100vw;\n    height: 100vh;\n    top: 0;\n    left: 0;\n    position: fixed;\n}\n.type > div:nth-child(3) > div[data-v-748c0f12]:first-child, .type > div:nth-child(4) > div[data-v-748c0f12]:first-child {\n      width: 100%;\n      height: 100%;\n      background: rgba(0, 0, 0, 0.5);\n      position: absolute;\n      top: 0;\n      left: 0;\n      cursor: pointer;\n}\n.type > div:nth-child(3) > div[data-v-748c0f12]:nth-child(2), .type > div:nth-child(4) > div[data-v-748c0f12]:nth-child(2) {\n      width: 70px;\n      height: 70px;\n      position: absolute;\n      top: 0;\n      right: 0;\n      background: rgba(0, 0, 0, 0.7);\n      cursor: pointer;\n      z-index: 2;\n}\n.type > div:nth-child(3) > div[data-v-748c0f12]:nth-child(2):before, .type > div:nth-child(3) > div[data-v-748c0f12]:nth-child(2):after, .type > div:nth-child(4) > div[data-v-748c0f12]:nth-child(2):before, .type > div:nth-child(4) > div[data-v-748c0f12]:nth-child(2):after {\n        content: '';\n        width: 60px;\n        height: 5px;\n        background: #fff;\n        opacity: 0.8;\n        position: absolute;\n        top: 50%;\n        left: 50%;\n        -webkit-transform: translate(-50%, -50%) rotate(45deg);\n                transform: translate(-50%, -50%) rotate(45deg);\n}\n.type > div:nth-child(3) > div[data-v-748c0f12]:nth-child(2):after, .type > div:nth-child(4) > div[data-v-748c0f12]:nth-child(2):after {\n        -webkit-transform: translate(-50%, -50%) rotate(-45deg);\n                transform: translate(-50%, -50%) rotate(-45deg);\n}\n.type > div:nth-child(3) > div[data-v-748c0f12]:last-child {\n    z-index: 1;\n    margin: 20px auto;\n}\n.type > div:nth-child(3) > div:last-child .owl-item[data-v-748c0f12] {\n      display: -webkit-box;\n      display: -ms-flexbox;\n      display: flex;\n}\n.type > div:nth-child(3) > div:last-child .owl-item img[data-v-748c0f12] {\n        max-height: 80vh;\n        max-width: 100%;\n        width: auto;\n        height: 100%;\n        margin: auto;\n}\n.type > div[data-v-748c0f12]:nth-child(4) {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n}\n.type > div:nth-child(4) > div[data-v-748c0f12]:last-child {\n      width: 80vw;\n      height: 50vh;\n      margin: auto;\n}\n", ""]);
+exports.push([module.i, "\n.type[data-v-748c0f12] {\n  width: 100%;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n}\n.type > div[data-v-748c0f12]:first-child {\n    width: 500px;\n    padding: 30px;\n    margin-bottom: 25px;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    -webkit-box-pack: start;\n        -ms-flex-pack: start;\n            justify-content: flex-start;\n    background: #B8D9EC;\n    border-top-right-radius: 35px;\n    border-bottom-right-radius: 35px;\n    margin-left: 0;\n    margin-right: auto;\n}\n.type > div:first-child span.arrow[data-v-748c0f12] {\n      padding: 0 20px;\n}\n.type > div[data-v-748c0f12]:nth-child(2) {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n    min-width: 700px;\n}\n.type > div:nth-child(2) > img[data-v-748c0f12] {\n      height: 90vh;\n      width: auto;\n      margin-right: 20px;\n}\n.type > div:nth-child(2) > div[data-v-748c0f12] {\n      display: -webkit-box;\n      display: -ms-flexbox;\n      display: flex;\n      -webkit-box-orient: vertical;\n      -webkit-box-direction: normal;\n          -ms-flex-direction: column;\n              flex-direction: column;\n      -webkit-box-align: center;\n          -ms-flex-align: center;\n              align-items: center;\n}\n.type > div:nth-child(2) > div > div[data-v-748c0f12]:last-child {\n        margin-top: 20px;\n        display: -webkit-box;\n        display: -ms-flexbox;\n        display: flex;\n        -webkit-box-align: center;\n            -ms-flex-align: center;\n                align-items: center;\n        -webkit-box-pack: center;\n            -ms-flex-pack: center;\n                justify-content: center;\n}\n.type > div:nth-child(2) > div > div:last-child span[data-v-748c0f12]:first-child {\n          margin-right: 15px;\n}\n.type > div:nth-child(2) > div > div:last-child span[data-v-748c0f12] {\n          display: block;\n          width: 180px;\n          background: #fff;\n          position: relative;\n          text-align: center;\n          color: #000;\n          padding: 5px 0;\n          border-radius: 10px;\n          cursor: pointer;\n}\n.type > div[data-v-748c0f12]:nth-child(3), .type > div[data-v-748c0f12]:nth-child(4) {\n    width: 100vw;\n    height: 100vh;\n    top: 0;\n    left: 0;\n    position: fixed;\n}\n.type > div:nth-child(3) > div[data-v-748c0f12]:first-child, .type > div:nth-child(4) > div[data-v-748c0f12]:first-child {\n      width: 100%;\n      height: 100%;\n      background: rgba(0, 0, 0, 0.5);\n      position: absolute;\n      top: 0;\n      left: 0;\n      cursor: pointer;\n}\n.type > div:nth-child(3) > div[data-v-748c0f12]:nth-child(2), .type > div:nth-child(4) > div[data-v-748c0f12]:nth-child(2) {\n      width: 70px;\n      height: 70px;\n      position: absolute;\n      top: 0;\n      right: 0;\n      background: rgba(0, 0, 0, 0.7);\n      cursor: pointer;\n      z-index: 2;\n}\n.type > div:nth-child(3) > div[data-v-748c0f12]:nth-child(2):before, .type > div:nth-child(3) > div[data-v-748c0f12]:nth-child(2):after, .type > div:nth-child(4) > div[data-v-748c0f12]:nth-child(2):before, .type > div:nth-child(4) > div[data-v-748c0f12]:nth-child(2):after {\n        content: '';\n        width: 60px;\n        height: 5px;\n        background: #fff;\n        opacity: 0.8;\n        position: absolute;\n        top: 50%;\n        left: 50%;\n        -webkit-transform: translate(-50%, -50%) rotate(45deg);\n                transform: translate(-50%, -50%) rotate(45deg);\n}\n.type > div:nth-child(3) > div[data-v-748c0f12]:nth-child(2):after, .type > div:nth-child(4) > div[data-v-748c0f12]:nth-child(2):after {\n        -webkit-transform: translate(-50%, -50%) rotate(-45deg);\n                transform: translate(-50%, -50%) rotate(-45deg);\n}\n.type > div:nth-child(3) > div[data-v-748c0f12]:last-child {\n    z-index: 1;\n    margin: 20px auto;\n}\n.type > div:nth-child(3) > div:last-child .owl-item[data-v-748c0f12] {\n      display: -webkit-box;\n      display: -ms-flexbox;\n      display: flex;\n}\n.type > div:nth-child(3) > div:last-child .owl-item img[data-v-748c0f12] {\n        max-height: 80vh;\n        max-width: 100%;\n        width: auto;\n        height: 100%;\n        margin: auto;\n}\n.type > div[data-v-748c0f12]:nth-child(4) {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n}\n.type > div:nth-child(4) > div[data-v-748c0f12]:last-child {\n      width: 80vw;\n      height: 50vh;\n      margin: auto;\n}\n", ""]);
 
 // exports
 
@@ -14308,7 +14288,7 @@ exports.push([module.i, "\n.type[data-v-748c0f12] {\n  width: 100%;\n  display: 
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue_owl_carousel__ = __webpack_require__(25);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue_owl_carousel___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue_owl_carousel__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_photo_sphere_viewer__ = __webpack_require__(27);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_photo_sphere_viewer__ = __webpack_require__(26);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_photo_sphere_viewer___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_photo_sphere_viewer__);
 //
 //
@@ -14587,157 +14567,6 @@ return e%2===0?i+e/2:n-(e+1)/2};return t===r?e.map(this._clones,function(e,t){re
 /* 26 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "type" }, [
-    _c("div", [
-      _c("a", { attrs: { href: _vm.href } }, [_vm._v("Выбор этажа")]),
-      _vm._v(" "),
-      _c("span", { staticClass: "arrow" }, [_vm._v("\n\t\t\t>\n\t\t")]),
-      _vm._v(" "),
-      _c("a", { attrs: { href: _vm.href2 } }, [
-        _vm._v("\n\t\t\tЭтаж " + _vm._s(_vm.floor) + "\n\t\t")
-      ]),
-      _vm._v(" "),
-      _c("span", { staticClass: "arrow" }, [_vm._v("\n\t\t\t>\n\t\t")]),
-      _vm._v(" "),
-      _c("span", [_vm._v("\n\t\t\tПланировка " + _vm._s(_vm.type) + "\n\t\t")])
-    ]),
-    _vm._v(" "),
-    _c("div", [
-      _c("img", {
-        attrs: { src: _vm.path + "img/apartment/room-" + _vm.type + ".png" }
-      }),
-      _vm._v(" "),
-      _c("div", [
-        _c("div", [_vm._v("\n\t\t\t\t" + _vm._s(_vm.descAp) + "\n\t\t\t")]),
-        _vm._v(" "),
-        _c("div", [
-          _c(
-            "span",
-            {
-              on: {
-                click: function($event) {
-                  _vm.slider = true
-                }
-              }
-            },
-            [_vm._v("\n\t\t\t\t\tВизуализация\n\t\t\t\t")]
-          ),
-          _vm._v(" "),
-          _c(
-            "span",
-            {
-              on: {
-                click: function($event) {
-                  _vm.panorama = !_vm.panorama
-                }
-              }
-            },
-            [_vm._v("\n\t\t\t\t\tПанорама\n\t\t\t\t")]
-          )
-        ])
-      ])
-    ]),
-    _vm._v(" "),
-    _c(
-      "div",
-      {
-        directives: [
-          {
-            name: "show",
-            rawName: "v-show",
-            value: _vm.slider,
-            expression: "slider"
-          }
-        ]
-      },
-      [
-        _c("div", {
-          on: {
-            click: function($event) {
-              _vm.slider = false
-            }
-          }
-        }),
-        _vm._v(" "),
-        _c("div", {
-          on: {
-            click: function($event) {
-              _vm.slider = false
-            }
-          }
-        }),
-        _vm._v(" "),
-        _c(
-          "div",
-          [
-            _c(
-              "carousel",
-              { attrs: { items: 1, loop: true, center: true, dots: false } },
-              _vm._l(_vm.imgs, function(img) {
-                return _c("img", { attrs: { src: _vm.path + img } })
-              })
-            )
-          ],
-          1
-        )
-      ]
-    ),
-    _vm._v(" "),
-    _c(
-      "div",
-      {
-        directives: [
-          {
-            name: "show",
-            rawName: "v-show",
-            value: _vm.panorama,
-            expression: "panorama"
-          }
-        ]
-      },
-      [
-        _c("div", {
-          on: {
-            click: function($event) {
-              _vm.panorama = false
-            }
-          }
-        }),
-        _vm._v(" "),
-        _c("div", {
-          on: {
-            click: function($event) {
-              _vm.panorama = false
-            }
-          }
-        }),
-        _vm._v(" "),
-        _c("div", { attrs: { id: "viewer" } })
-      ]
-    ),
-    _vm._v(
-      "\n\t" + _vm._s(_vm.scrollToS) + "\n\t" + _vm._s(_vm.scrollToP) + "\n"
-    )
-  ])
-}
-var staticRenderFns = []
-render._withStripped = true
-module.exports = { render: render, staticRenderFns: staticRenderFns }
-if (false) {
-  module.hot.accept()
-  if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-748c0f12", module.exports)
-  }
-}
-
-/***/ }),
-/* 27 */
-/***/ (function(module, exports, __webpack_require__) {
-
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
  * Photo Sphere Viewer 3.4.1
  * Copyright (c) 2014-2015 Jérémy Heleine
@@ -14746,7 +14575,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
  */
 (function(root, factory) {
   if (true) {
-    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(28), __webpack_require__(29), __webpack_require__(30), __webpack_require__(31)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(27), __webpack_require__(28), __webpack_require__(29), __webpack_require__(30)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
 				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
 				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
 				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
@@ -22467,7 +22296,7 @@ return PhotoSphereViewer;
 
 
 /***/ }),
-/* 28 */
+/* 27 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -70720,7 +70549,7 @@ function LensFlare() {
 
 
 /***/ }),
-/* 29 */
+/* 28 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(process) {var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/**
@@ -71177,7 +71006,7 @@ function LensFlare() {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4)))
 
 /***/ }),
-/* 30 */
+/* 29 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -71483,7 +71312,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 
 
 /***/ }),
-/* 31 */
+/* 30 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_RESULT__;// doT.js
@@ -71634,9 +71463,162 @@ var __WEBPACK_AMD_DEFINE_RESULT__;// doT.js
 
 
 /***/ }),
-/* 32 */,
-/* 33 */,
-/* 34 */
+/* 31 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "type" }, [
+    _c("div", [
+      _c("a", { attrs: { href: _vm.href } }, [_vm._v("Выбор этажа")]),
+      _vm._v(" "),
+      _c("span", { staticClass: "arrow" }, [_vm._v("\n\t\t\t>\n\t\t")]),
+      _vm._v(" "),
+      _c("a", { attrs: { href: _vm.href2 } }, [
+        _vm._v("\n\t\t\tЭтаж " + _vm._s(_vm.floor) + "\n\t\t")
+      ]),
+      _vm._v(" "),
+      _c("span", { staticClass: "arrow" }, [_vm._v("\n\t\t\t>\n\t\t")]),
+      _vm._v(" "),
+      _c("span", [_vm._v("\n\t\t\tПланировка " + _vm._s(_vm.type) + "\n\t\t")])
+    ]),
+    _vm._v(" "),
+    _c("div", [
+      _c("img", {
+        attrs: { src: _vm.path + "img/apartment/room-" + _vm.type + ".png" }
+      }),
+      _vm._v(" "),
+      _c("div", [
+        _c("div", [_vm._v("\n\t\t\t\t" + _vm._s(_vm.descAp) + "\n\t\t\t")]),
+        _vm._v(" "),
+        _c("div", [
+          _c(
+            "span",
+            {
+              on: {
+                click: function($event) {
+                  _vm.slider = true
+                }
+              }
+            },
+            [_vm._v("\n\t\t\t\t\tВизуализация\n\t\t\t\t")]
+          ),
+          _vm._v(" "),
+          _c(
+            "span",
+            {
+              on: {
+                click: function($event) {
+                  _vm.panorama = !_vm.panorama
+                }
+              }
+            },
+            [_vm._v("\n\t\t\t\t\tПанорама\n\t\t\t\t")]
+          )
+        ])
+      ])
+    ]),
+    _vm._v(" "),
+    _c(
+      "div",
+      {
+        directives: [
+          {
+            name: "show",
+            rawName: "v-show",
+            value: _vm.slider,
+            expression: "slider"
+          }
+        ]
+      },
+      [
+        _c("div", {
+          on: {
+            click: function($event) {
+              _vm.slider = false
+            }
+          }
+        }),
+        _vm._v(" "),
+        _c("div", {
+          on: {
+            click: function($event) {
+              _vm.slider = false
+            }
+          }
+        }),
+        _vm._v(" "),
+        _c(
+          "div",
+          [
+            _c(
+              "carousel",
+              { attrs: { items: 1, loop: true, center: true, dots: false } },
+              _vm._l(_vm.imgs, function(img) {
+                return _c("img", {
+                  attrs: {
+                    src: _vm.path + "/img/rooms/room-" + _vm.type + "/" + img
+                  }
+                })
+              })
+            )
+          ],
+          1
+        )
+      ]
+    ),
+    _vm._v(" "),
+    _c(
+      "div",
+      {
+        directives: [
+          {
+            name: "show",
+            rawName: "v-show",
+            value: _vm.panorama,
+            expression: "panorama"
+          }
+        ]
+      },
+      [
+        _c("div", {
+          on: {
+            click: function($event) {
+              _vm.panorama = false
+            }
+          }
+        }),
+        _vm._v(" "),
+        _c("div", {
+          on: {
+            click: function($event) {
+              _vm.panorama = false
+            }
+          }
+        }),
+        _vm._v(" "),
+        _c("div", { attrs: { id: "viewer" } })
+      ]
+    ),
+    _vm._v(
+      "\n\t" + _vm._s(_vm.scrollToS) + "\n\t" + _vm._s(_vm.scrollToP) + "\n"
+    )
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-748c0f12", module.exports)
+  }
+}
+
+/***/ }),
+/* 32 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
