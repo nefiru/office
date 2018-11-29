@@ -721,20 +721,21 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__floor_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__floor_vue__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__type_vue__ = __webpack_require__(21);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__type_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__type_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_photo_sphere_viewer__ = __webpack_require__(26);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_photo_sphere_viewer___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_photo_sphere_viewer__);
 
 
 
 
-// import Photo from 'photo-sphere-viewer';
 
-
-// var $ = require('jquery');
 
 var app = new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
 	el: '#app',
 	data: {
 		floor: false,
-		type: false
+		type: false,
+		panorama: false,
+		path: window.path
 	},
 	components: {
 		office: __WEBPACK_IMPORTED_MODULE_1__office_vue___default.a,
@@ -742,6 +743,10 @@ var app = new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
 		type: __WEBPACK_IMPORTED_MODULE_3__type_vue___default.a
 	},
 	methods: {
+		viewPano: function viewPano(status) {
+			this.panorama = true;
+			console.log('kek');
+		},
 		setGetParams: function setGetParams() {
 			var params = window.location.search.replace('?', '').split('&').reduce(function (p, e) {
 				var a = e.split('=');
@@ -756,12 +761,54 @@ var app = new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
 			}
 		}
 	},
-	computed: {},
-	mounted: function mounted() {},
+	computed: {
+		scrollToP: function scrollToP() {
+			if (!this.panorama) {
+				document.documentElement.style.overflowX = 'hidden';
+				document.documentElement.style.overflowY = 'auto';
+			} else {
+				document.documentElement.style.overflow = 'hidden';
+			}
+		}
+	},
+	mounted: function mounted() {
+		if (this.type) {
+			window.viewer = new __WEBPACK_IMPORTED_MODULE_4_photo_sphere_viewer___default.a({
+				container: 'viewer',
+				panorama: this.path + './img/panorama.jpg'
+			});
+		}
+	},
 	beforeMount: function beforeMount() {
 		this.setGetParams();
+	},
+	events: {
+		panorama: function panorama() {
+			this.panorama = true;
+			console.log('kek');
+		}
 	}
 });
+
+// var params = window
+//     .location
+//     .search
+//     .replace('?','')
+//     .split('&')
+//     .reduce(
+//         function(p,e){
+//             var a = e.split('=');
+//             p[ decodeURIComponent(a[0])] = decodeURIComponent(a[1]);
+//             return p;
+//         },
+//         {}
+//     );
+// if ( params[ 'type' ] ) {
+// 	window.viewer = new Photo({
+// 		container: 'viewer',
+// 		panorama: this.path + './img/panorama.jpg'
+// 	});
+// }
 
 /***/ }),
 /* 7 */
@@ -14275,7 +14322,7 @@ exports = module.exports = __webpack_require__(1)(false);
 
 
 // module
-exports.push([module.i, "\n.type[data-v-748c0f12] {\n  width: 100%;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n}\n.type > div[data-v-748c0f12]:first-child {\n    width: 500px;\n    padding: 30px;\n    margin-bottom: 25px;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    -webkit-box-pack: start;\n        -ms-flex-pack: start;\n            justify-content: flex-start;\n    background: #B8D9EC;\n    border-top-right-radius: 35px;\n    border-bottom-right-radius: 35px;\n    margin-left: 0;\n    margin-right: auto;\n}\n.type > div:first-child span.arrow[data-v-748c0f12] {\n      padding: 0 20px;\n}\n.type > div[data-v-748c0f12]:nth-child(2) {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n    min-width: 700px;\n}\n.type > div:nth-child(2) > img[data-v-748c0f12] {\n      height: 90vh;\n      width: auto;\n      margin-right: 20px;\n}\n.type > div:nth-child(2) > div[data-v-748c0f12] {\n      display: -webkit-box;\n      display: -ms-flexbox;\n      display: flex;\n      -webkit-box-orient: vertical;\n      -webkit-box-direction: normal;\n          -ms-flex-direction: column;\n              flex-direction: column;\n      -webkit-box-align: center;\n          -ms-flex-align: center;\n              align-items: center;\n}\n.type > div:nth-child(2) > div > div[data-v-748c0f12]:last-child {\n        margin-top: 20px;\n        display: -webkit-box;\n        display: -ms-flexbox;\n        display: flex;\n        -webkit-box-align: center;\n            -ms-flex-align: center;\n                align-items: center;\n        -webkit-box-pack: center;\n            -ms-flex-pack: center;\n                justify-content: center;\n}\n.type > div:nth-child(2) > div > div:last-child span[data-v-748c0f12]:first-child {\n          margin-right: 15px;\n}\n.type > div:nth-child(2) > div > div:last-child span[data-v-748c0f12] {\n          display: block;\n          width: 180px;\n          background: #fff;\n          position: relative;\n          text-align: center;\n          color: #000;\n          padding: 5px 0;\n          border-radius: 10px;\n          cursor: pointer;\n}\n.type > div[data-v-748c0f12]:nth-child(3), .type > div[data-v-748c0f12]:nth-child(4) {\n    width: 100vw;\n    height: 100vh;\n    top: 0;\n    left: 0;\n    position: fixed;\n}\n.type > div:nth-child(3) > div[data-v-748c0f12]:first-child, .type > div:nth-child(4) > div[data-v-748c0f12]:first-child {\n      width: 100%;\n      height: 100%;\n      background: rgba(0, 0, 0, 0.5);\n      position: absolute;\n      top: 0;\n      left: 0;\n      cursor: pointer;\n}\n.type > div:nth-child(3) > div[data-v-748c0f12]:nth-child(2), .type > div:nth-child(4) > div[data-v-748c0f12]:nth-child(2) {\n      width: 70px;\n      height: 70px;\n      position: absolute;\n      top: 0;\n      right: 0;\n      background: rgba(0, 0, 0, 0.7);\n      cursor: pointer;\n      z-index: 2;\n}\n.type > div:nth-child(3) > div[data-v-748c0f12]:nth-child(2):before, .type > div:nth-child(3) > div[data-v-748c0f12]:nth-child(2):after, .type > div:nth-child(4) > div[data-v-748c0f12]:nth-child(2):before, .type > div:nth-child(4) > div[data-v-748c0f12]:nth-child(2):after {\n        content: '';\n        width: 60px;\n        height: 5px;\n        background: #fff;\n        opacity: 0.8;\n        position: absolute;\n        top: 50%;\n        left: 50%;\n        -webkit-transform: translate(-50%, -50%) rotate(45deg);\n                transform: translate(-50%, -50%) rotate(45deg);\n}\n.type > div:nth-child(3) > div[data-v-748c0f12]:nth-child(2):after, .type > div:nth-child(4) > div[data-v-748c0f12]:nth-child(2):after {\n        -webkit-transform: translate(-50%, -50%) rotate(-45deg);\n                transform: translate(-50%, -50%) rotate(-45deg);\n}\n.type > div:nth-child(3) > div[data-v-748c0f12]:last-child {\n    z-index: 1;\n    margin: 20px auto;\n}\n.type > div:nth-child(3) > div:last-child .owl-item[data-v-748c0f12] {\n      display: -webkit-box;\n      display: -ms-flexbox;\n      display: flex;\n}\n.type > div:nth-child(3) > div:last-child .owl-item img[data-v-748c0f12] {\n        max-height: 80vh;\n        max-width: 100%;\n        width: auto;\n        height: 100%;\n        margin: auto;\n}\n.type > div[data-v-748c0f12]:nth-child(4) {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n}\n.type > div:nth-child(4) > div[data-v-748c0f12]:last-child {\n      width: 80vw;\n      height: 50vh;\n      margin: auto;\n}\n", ""]);
+exports.push([module.i, "\n.type[data-v-748c0f12] {\n  width: 100%;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n}\n.type > div[data-v-748c0f12]:first-child {\n    width: 500px;\n    padding: 30px;\n    margin-bottom: 25px;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    -webkit-box-pack: start;\n        -ms-flex-pack: start;\n            justify-content: flex-start;\n    background: #fff;\n    border-top-right-radius: 35px;\n    border-bottom-right-radius: 35px;\n    margin-left: 0;\n    margin-right: auto;\n}\n.type > div:first-child span.arrow[data-v-748c0f12] {\n      padding: 0 20px;\n}\n.type > div[data-v-748c0f12]:nth-child(2) {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n    min-width: 700px;\n}\n.type > div:nth-child(2) > img[data-v-748c0f12] {\n      height: 90vh;\n      width: auto;\n      margin-right: 20px;\n}\n.type > div:nth-child(2) > div[data-v-748c0f12] {\n      display: -webkit-box;\n      display: -ms-flexbox;\n      display: flex;\n      -webkit-box-orient: vertical;\n      -webkit-box-direction: normal;\n          -ms-flex-direction: column;\n              flex-direction: column;\n      -webkit-box-align: center;\n          -ms-flex-align: center;\n              align-items: center;\n}\n.type > div:nth-child(2) > div > div[data-v-748c0f12]:first-child {\n        color: #fff;\n}\n.type > div:nth-child(2) > div > div[data-v-748c0f12]:last-child {\n        margin-top: 20px;\n        display: -webkit-box;\n        display: -ms-flexbox;\n        display: flex;\n        -webkit-box-align: center;\n            -ms-flex-align: center;\n                align-items: center;\n        -webkit-box-pack: center;\n            -ms-flex-pack: center;\n                justify-content: center;\n}\n.type > div:nth-child(2) > div > div:last-child span[data-v-748c0f12]:first-child {\n          margin-right: 15px;\n}\n.type > div:nth-child(2) > div > div:last-child span[data-v-748c0f12] {\n          display: block;\n          width: 180px;\n          background: #fff;\n          position: relative;\n          text-align: center;\n          color: #000;\n          padding: 5px 0;\n          border-radius: 10px;\n          cursor: pointer;\n}\n.type > div[data-v-748c0f12]:nth-child(3), .type > div[data-v-748c0f12]:nth-child(4) {\n    width: 100vw;\n    height: 100vh;\n    top: 0;\n    left: 0;\n    position: fixed;\n}\n.type > div:nth-child(3) > div[data-v-748c0f12]:first-child, .type > div:nth-child(4) > div[data-v-748c0f12]:first-child {\n      width: 100%;\n      height: 100%;\n      background: rgba(0, 0, 0, 0.5);\n      position: absolute;\n      top: 0;\n      left: 0;\n      cursor: pointer;\n}\n.type > div:nth-child(3) > div[data-v-748c0f12]:nth-child(2), .type > div:nth-child(4) > div[data-v-748c0f12]:nth-child(2) {\n      width: 70px;\n      height: 70px;\n      position: absolute;\n      top: 0;\n      right: 0;\n      background: rgba(0, 0, 0, 0.7);\n      cursor: pointer;\n      z-index: 2;\n}\n.type > div:nth-child(3) > div[data-v-748c0f12]:nth-child(2):before, .type > div:nth-child(3) > div[data-v-748c0f12]:nth-child(2):after, .type > div:nth-child(4) > div[data-v-748c0f12]:nth-child(2):before, .type > div:nth-child(4) > div[data-v-748c0f12]:nth-child(2):after {\n        content: '';\n        width: 60px;\n        height: 5px;\n        background: #fff;\n        opacity: 0.8;\n        position: absolute;\n        top: 50%;\n        left: 50%;\n        -webkit-transform: translate(-50%, -50%) rotate(45deg);\n                transform: translate(-50%, -50%) rotate(45deg);\n}\n.type > div:nth-child(3) > div[data-v-748c0f12]:nth-child(2):after, .type > div:nth-child(4) > div[data-v-748c0f12]:nth-child(2):after {\n        -webkit-transform: translate(-50%, -50%) rotate(-45deg);\n                transform: translate(-50%, -50%) rotate(-45deg);\n}\n.type > div:nth-child(3) > div[data-v-748c0f12]:last-child {\n    z-index: 1;\n    margin: 20px auto;\n}\n.type > div:nth-child(3) > div:last-child .owl-item[data-v-748c0f12] {\n      display: -webkit-box;\n      display: -ms-flexbox;\n      display: flex;\n}\n.type > div:nth-child(3) > div:last-child .owl-item img[data-v-748c0f12] {\n        max-height: 80vh;\n        max-width: 100%;\n        width: auto;\n        height: 100%;\n        margin: auto;\n}\n.type > div[data-v-748c0f12]:nth-child(4) {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n}\n.type > div:nth-child(4) > div[data-v-748c0f12]:last-child {\n      width: 80vw;\n      height: 50vh;\n      margin: auto;\n}\n", ""]);
 
 // exports
 
@@ -14288,8 +14335,6 @@ exports.push([module.i, "\n.type[data-v-748c0f12] {\n  width: 100%;\n  display: 
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue_owl_carousel__ = __webpack_require__(25);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue_owl_carousel___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue_owl_carousel__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_photo_sphere_viewer__ = __webpack_require__(26);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_photo_sphere_viewer___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_photo_sphere_viewer__);
 //
 //
 //
@@ -14482,7 +14527,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-
+//
+//
 
 
 
@@ -14501,7 +14547,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 			viewer: ''
 		};
 	},
-	methods: {},
+	methods: {
+		panClick: function panClick() {
+			this.$emit('panclick', true);
+		}
+	},
 	computed: {
 		scrollToS: function scrollToS() {
 			if (!this.slider) {
@@ -14510,22 +14560,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 			} else {
 				document.documentElement.style.overflow = 'hidden';
 			}
-		},
-		scrollToP: function scrollToP() {
-			if (!this.panorama) {
-				document.documentElement.style.overflowX = 'hidden';
-				document.documentElement.style.overflowY = 'auto';
-			} else {
-				document.documentElement.style.overflow = 'hidden';
-			}
 		}
+
 	},
-	mounted: function mounted() {
-		window.viewer = new __WEBPACK_IMPORTED_MODULE_1_photo_sphere_viewer___default.a({
-			container: 'viewer',
-			panorama: this.path + 'img/panorama.jpg'
-		});
-	},
+	mounted: function mounted() {},
 	components: {
 		carousel: __WEBPACK_IMPORTED_MODULE_0_vue_owl_carousel___default.a
 	}
@@ -71511,7 +71549,7 @@ var render = function() {
             {
               on: {
                 click: function($event) {
-                  _vm.panorama = !_vm.panorama
+                  _vm.panClick()
                 }
               }
             },
@@ -71559,7 +71597,7 @@ var render = function() {
               _vm._l(_vm.imgs, function(img) {
                 return _c("img", {
                   attrs: {
-                    src: _vm.path + "/img/rooms/room-" + _vm.type + "/" + img
+                    src: _vm.path + "img/rooms/room-" + _vm.type + "/" + img
                   }
                 })
               })
@@ -71570,41 +71608,7 @@ var render = function() {
       ]
     ),
     _vm._v(" "),
-    _c(
-      "div",
-      {
-        directives: [
-          {
-            name: "show",
-            rawName: "v-show",
-            value: _vm.panorama,
-            expression: "panorama"
-          }
-        ]
-      },
-      [
-        _c("div", {
-          on: {
-            click: function($event) {
-              _vm.panorama = false
-            }
-          }
-        }),
-        _vm._v(" "),
-        _c("div", {
-          on: {
-            click: function($event) {
-              _vm.panorama = false
-            }
-          }
-        }),
-        _vm._v(" "),
-        _c("div", { attrs: { id: "viewer" } })
-      ]
-    ),
-    _vm._v(
-      "\n\t" + _vm._s(_vm.scrollToS) + "\n\t" + _vm._s(_vm.scrollToP) + "\n"
-    )
+    _vm._v("\n\t" + _vm._s(_vm.scrollToS) + "\n")
   ])
 }
 var staticRenderFns = []
