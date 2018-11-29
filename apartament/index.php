@@ -112,7 +112,7 @@
 				echo '<script type="text/javascript">
 				window.descFloor =\'' . carbon_get_post_meta(get_the_ID(),'eng_plan_8-21_stage_description','rich-text') . '\';
 				</script>';
-				for ( $i = 1; $i < 33; $i++ ) {
+				for ( $i = 1; $i < 34; $i++ ) {
 					$arrayAp[] = carbon_get_post_meta(get_the_ID(),'eng_apartament' . $i . '-excerpt','text');
 				}
 				echo '<script type="text/javascript">
@@ -133,6 +133,8 @@
 			echo '<script type="text/javascript">
 			window.imgs =\'' . json_encode($files) . '\';
 			</script>';
+
+			echo get_bloginfo('template_url') . '/img/rooms/room-' . $_GET[ 'type' ];
 		}
 
 
@@ -157,7 +159,7 @@
 		// 		window.descFloor =\'описание этажей с 8\';
 		// 		</script>';
 
-		// 		for ( $i = 1; $i < 33; $i++ ) {
+		// 		for ( $i = 1; $i < 34; $i++ ) {
 		// 			$arrayAp[] = 'краткое описание квартиры ' . $i;
 		// 		}
 		// 		echo '<script type="text/javascript">
