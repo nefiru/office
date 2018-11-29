@@ -18,6 +18,58 @@
 			max-width: 700px;
 			overflow: hidden;
 		}
+		.app > div:last-child {
+			width: 100vw;
+			height: 100vh;
+			top: 0;
+			left: 0;
+			position: fixed;
+			display: flex;
+			opacity: 0;
+			z-index: -1000;
+		}			
+		.app > div:last-child.active {
+			opacity: 1;
+			z-index: 1000;
+		}
+		.app > div:last-child > div:first-child {
+			width: 100%;
+			height: 100%;
+			background: rgba(0, 0, 0, 0.5);
+			position: absolute;
+			top:0;
+			left: 0;
+			cursor: pointer;
+		}
+		.app > div:last-child > div:nth-child(2) {
+			width: 70px;
+			height: 70px;
+			position: absolute;
+			top: 0;
+			right: 0;
+			background: rgba(0, 0, 0, 0.7);
+			cursor: pointer;
+			z-index: 2;
+		}
+		.app > div:last-child > div:nth-child(2):before, .app > div:last-child > div:nth-child(2):after {
+			content: '';
+			width: 60px;
+			height: 5px;
+			background: #fff;
+			opacity: 0.8;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%) rotate(45deg);
+		}
+		.app > div:last-child > div:nth-child(2):after {
+			transform: translate(-50%, -50%) rotate(-45deg);
+		}
+		.app > div:last-child > div:last-child {
+			width: 80vw;
+			height: 50vh;
+			margin: auto;
+		}
 	</style>
 </head>
 <body>
@@ -30,8 +82,16 @@
 			<floor :floor="floor"></floor>
 		</div>
 		<div v-else>
-			<type :type="type" :floor="floor"></type>
+			<type :type="type" :floor="floor" @panclick="viewPano"></type>
 		</div>
+		<div :class="panorama ? 'active' : ''">
+			<div @click="panorama = false"></div>
+			<div @click="panorama = false"></div>
+			<div id="viewer">
+				
+			</div>
+		</div>
+		{{scrollToP}}
 	</div>
 	<?php
 		
@@ -122,10 +182,10 @@
 		// 	</script>';
 
 		// }
-
 		
 	?>
-	<script type="text/javascript" src="<?php echo get_bloginfo('template_url'); ?>/complied/js/app.js"></script>
+	
+	<script type="text/javascript" src="<?=get_bloginfo('template_url')?>/complied/js/app.js"></script>
 	
 </body>
 </html>
