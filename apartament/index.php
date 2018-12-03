@@ -96,7 +96,7 @@
 	<?php
 		
 
-	echo '<script type="text/javascript">
+		echo '<script type="text/javascript">
 		window.path =\'' . get_bloginfo('template_url') . '/\';
 		</script>';
 		if ( !isset( $_GET[ 'floor' ] ) && !isset( $_GET[ 'type' ] )  ) {
@@ -112,7 +112,7 @@
 				echo '<script type="text/javascript">
 				window.descFloor =\'' . carbon_get_post_meta(get_the_ID(),'eng_plan_8-21_stage_description','rich-text') . '\';
 				</script>';
-				for ( $i = 1; $i < 34; $i++ ) {
+				for ( $i = 1; $i < 33; $i++ ) {
 					$arrayAp[] = carbon_get_post_meta(get_the_ID(),'eng_apartament' . $i . '-excerpt','text');
 				}
 				echo '<script type="text/javascript">
@@ -124,17 +124,22 @@
 			echo '<script type="text/javascript">
 			window.richDescAp =`' . carbon_get_post_meta(get_the_ID(),'eng_apartament' . $_GET[ 'type' ] . '-desc','rich-text') . '`;
 			</script>';
-			$dir = opendir( get_bloginfo('template_url') . '/img/rooms/room-' . $_GET[ 'type' ] );
-			while($file = readdir($dir)){
-			    if( $file != '.' || $file != '..' ) {
-			        $files[] = $file;
-			    }
-			}
+			// $dir = opendir( get_bloginfo('template_url') . '/img/rooms/room-' . $_GET[ 'type' ] );
+			// while($file = readdir($dir)){
+			//     if( $file != '.' || $file != '..' ) {
+			//         $files[] = $file;
+			//     }
+			// }
+			// echo '<script type="text/javascript">
+			// window.imgs =\'' . json_encode($files) . '\';
+			// </script>';
+
+			$output = `ls ./wp-content/themes/kievproject/img/rooms/room-{$_GET[ 'type' ]}`;
+			$files = array_filter(preg_split( '/\n/', $output ));
 			echo '<script type="text/javascript">
 			window.imgs =\'' . json_encode($files) . '\';
 			</script>';
 
-			echo get_bloginfo('template_url') . '/img/rooms/room-' . $_GET[ 'type' ];
 		}
 
 
