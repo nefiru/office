@@ -95,6 +95,9 @@
 	</div>
 	<?php
 
+	
+		
+
 		echo '<script type="text/javascript">
 		window.path =\'' . get_bloginfo('template_url') . '/\';
 		</script>';
